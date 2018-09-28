@@ -13,6 +13,8 @@
         width: 80%;
       }
      </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<h1 align="center">IOT LIGHT project</h1>
@@ -21,7 +23,7 @@
 			<table>
 				<tr>
 					<td colspan="2">
-					<input type="text" name="api-key" placeholder="Enter the api-key here" size="47px">
+					<input type="text" id="apikey" name="api-key" placeholder="Enter the api-key here" size="47px">
 					</td>
 				</tr>
 				<tr>
@@ -31,18 +33,32 @@
 					</td>
 				</tr>
 				<tr>
-					<td><button type="button" onclick="alert('Hello world!')">Light Me Up!</button>
+					<td><button type="button" id="lighton">Light Me Up!</button>
 					</td>
-					<td><button type="button" onclick="alert('Hello world!')">Let it be Dark!</button>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-					<input type="text" name="something" placeholder="I don't know what it does" size="47px">
+					<td><button type="button" id="lightoff">Let it be Dark!</button>
 					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
+	<script>
+	document.getElementById('lighton').addEventListener('click', function() {
+		
+	//var ip = document.getElementById('apikey').value;
+	var url = "http://api.thingspeak.com/update?api_key=QNMLVODE98JZ8UTL&field1=1"
+	$.getJSON(url, function(data) {
+		console.log(data);
+	});
+});
+
+document.getElementById('lightoff').addEventListener('click', function() {
+	var ip = document.getElementById('apikey').value;
+	var url = "http://api.thingspeak.com/update?api_key=QNMLVODE98JZ8UTL&field1=0"
+	$.getJSON(url, function(data) {
+		console.log(data);
+	});
+});
+
+	</script>
 </body>
 </html>
