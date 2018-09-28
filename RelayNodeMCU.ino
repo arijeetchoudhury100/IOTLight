@@ -1,32 +1,5 @@
-//#include <WiFiClientSecureAxTLS.h>
-//#include <ESP8266WiFiSTA.h>
-//#include <WiFiClientSecure.h>
-//#include <WiFiClient.h>
-//#include <ESP8266WiFiAP.h>
-//#include <WiFiServer.h>
-//#include <BearSSLHelpers.h>
-//#include <CertStoreBearSSL.h>
-//#include <WiFiServerSecure.h>
-//#include <WiFiClientSecureBearSSL.h>
-//#include <WiFiServerSecureAxTLS.h>
-//#include <ESP8266WiFiMulti.h>
-//#include <ESP8266WiFiType.h>
-//#include <WiFiServerSecureBearSSL.h>
-//#include <ESP8266WiFiGeneric.h>
 #include <ESP8266WiFi.h>
-//#include <WiFiUdp.h>
-//#include <ESP8266WiFiScan.h>
 
-/*
-  ESP8266 Blink by Simon Peter
-  Blink the blue LED on the ESP-01 module
-  This example code is in the public domain
-
-  The blue LED on the ESP-01 module is connected to GPIO1
-  (which is also the TXD pin; so we cannot use Serial.print() at the same time)
-
-  Note that this sketch uses LED_BUILTIN to find the pin with the internal LED
-*/
 const char* ssid = "U R Hacked";
 const char* password = "1223334444";
 
